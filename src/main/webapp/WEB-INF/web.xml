@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0"
+         metadata-complete="true">  <!-- Ajout important -->
+
+    <!-- Session timeout configuration -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- Welcome file list -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet declarations -->
+    <servlet>
+        <servlet-name>FermierServlet</servlet-name>
+        <servlet-class>org.example.apiculture1.controllers.FermierServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FermierServlet</servlet-name>
+        <url-pattern>/fermiers</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FermeServlet</servlet-name>
+        <servlet-class>org.example.apiculture1.controllers.FermeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FermeServlet</servlet-name>
+        <url-pattern>/fermes</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RucheServlet</servlet-name>
+        <servlet-class>org.example.apiculture1.controllers.RucheServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RucheServlet</servlet-name>
+        <url-pattern>/ruches</url-pattern>
+    </servlet-mapping>
+</web-app>
